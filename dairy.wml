@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE wml PUBLIC "-//WAPFORUM//DTD WML 1.1//EN"
+   "http://www.wapforum.org/DTD/wml_1.1.xml">
+<wml>
+    <!-- Main Card: Displays Diary Entries -->
+    <card id="main" title="Personal Diary">
+        <p align="center" style="font-size: 18px; font-weight: bold; color: #4CAF50;">Welcome to Your Diary</p>
+        <p align="center" style="font-size: 14px; color: #333;">
+            <anchor style="color: #1E88E5;">View Entries
+                <go href="http://localhost/diary/view_entries.php" method="get" />
+            </anchor>
+        </p>
+        <p align="center" style="font-size: 14px; color: #333;">
+            <anchor style="color: #1E88E5;">Add Entry
+                <go href="#addEntry" />
+            </anchor>
+        </p>
+        <p align="center" style="font-size: 14px; color: #333;">
+            <anchor style="color: #E53935;">Delete Entry
+                <go href="#deleteEntry" />
+            </anchor>
+        </p>
+    </card>
+
+    <!-- Card for Adding an Entry -->
+    <card id="addEntry" title="Add Diary Entry">
+        <p align="left" style="font-size: 14px; font-weight: bold;">Title:</p>
+        <p align="left"><input name="title" style="width: 80%; padding: 5px; font-size: 14px;" /></p>
+        <p align="left" style="font-size: 14px; font-weight: bold;">Content:</p>
+        <p align="left"><input name="content" style="width: 80%; padding: 5px; font-size: 14px;" /></p>
+        <p align="center">
+            <anchor style="color: #4CAF50;">Save
+                <go href="http://localhost/diary/add_entry.php" method="post">
+                    <postfield name="title" value="$(title)" />
+                    <postfield name="content" value="$(content)" />
+                </go>
+            </anchor>
+        </p>
+        <p align="center">
+            <anchor style="color: #E53935;">Back
+                <prev/>
+            </anchor>
+        </p>
+    </card>
+
+    <!-- Card for Deleting an Entry -->
+    <card id="deleteEntry" title="Delete Entry">
+        <p align="left" style="font-size: 14px; font-weight: bold;">Enter Entry ID to Delete:</p>
+        <p align="left"><input name="entry_id" style="width: 80%; padding: 5px; font-size: 14px;" /></p>
+        <p align="center">
+            <anchor style="color: #E53935;">Delete
+                <go href="http://localhost/diary/delete_entry.php" method="post">
+                    <postfield name="entry_id" value="$(entry_id)" />
+                </go>
+            </anchor>
+        </p>
+        <p align="center">
+            <anchor style="color: #1E88E5;">Back
+                <prev/>
+            </anchor>
+        </p>
+    </card>
+</wml>

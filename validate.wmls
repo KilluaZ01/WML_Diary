@@ -1,0 +1,7 @@
+extern function validateEntry(title, content) {
+    if (title == "" || content == "") {
+        alert("Title and Content cannot be empty.");
+        return false;
+    }
+    return true;
+}

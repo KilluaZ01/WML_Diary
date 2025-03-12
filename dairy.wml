@@ -16,7 +16,7 @@
             </anchor>
         </p>
         <p align="center" style="font-size: 14px; color: #333;">
-            <anchor style="color: #E53935;">Delete Entry
+            <anchor style="color: #E53936;">Delete Entry
                 <go href="#deleteEntry" />
             </anchor>
         </p>

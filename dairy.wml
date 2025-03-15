@@ -11,7 +11,7 @@
             </anchor>
         </p>
         <p align="center" style="font-size: 14px; color: #333;">
-            <anchor style="color: #1E88E5;">Add Entry
+            <anchor style="color: #1E88E6;">Add Entry
                 <go href="#addEntry" />
             </anchor>
         </p>
